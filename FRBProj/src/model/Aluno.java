@@ -1,15 +1,9 @@
 package model;
 
 public class Aluno extends Pessoa{
-	private int ra;
 	private String periodo;
 	private String curso;
-	public int getRa() {
-		return ra;
-	}
-	public void setRa(int ra) {
-		this.ra = ra;
-	}
+	
 	public String getPeriodo() {
 		return periodo;
 	}
