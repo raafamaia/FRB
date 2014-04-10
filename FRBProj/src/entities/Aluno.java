@@ -1,9 +1,16 @@
-package model;
+package entities;
 
-public class Aluno extends Pessoa{
+public class Aluno extends Usuario{
 	private String periodo;
 	private String curso;
+	private int ra;
 	
+	public int getRa() {
+		return ra;
+	}
+	public void setRa(int ra) {
+		this.ra = ra;
+	}
 	public String getPeriodo() {
 		return periodo;
 	}

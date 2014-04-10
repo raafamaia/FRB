@@ -1,8 +1,8 @@
-package model;
+package entities;
 
 public class Conta {
 	private int cod;
-	private Pessoa pessoa;
+	private Usuario usuario;
 	private double montante;
 	
 	public int getCod() {
@@ -11,11 +11,11 @@ public class Conta {
 	public void setCod(int cod) {
 		this.cod = cod;
 	}
-	public Pessoa getPessoa() {
-		return pessoa;
+	public Usuario getUsuario() {
+		return usuario;
 	}
-	public void setPessoa(Pessoa pessoa) {
-		this.pessoa = pessoa;
+	public void setUsuario(Usuario usuario) {
+		this.usuario = usuario;
 	}
 	public double getMontante() {
 		return montante;
