@@ -1,4 +1,4 @@
-package entities;
+package model;
 
 public class Aluno extends Usuario{
 	private String periodo;
