@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
  * Servlet implementation class CadastraAluno
  */
 @WebServlet("/CadastraAluno")
-public class CadastraAluno extends HttpServlet {
+public class AdicionaAlunoController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
 	protected void doPost(HttpServletRequest request,HttpServletResponse response) 
