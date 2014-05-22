@@ -1,10 +1,6 @@
 @CHARSET "UTF-8";
 
 
-#table{
-	border: 1px black solid;
-}
-
 #form{	
 	font-family: 'Visitor TT1 BRK', cursive;
 	border: 1px black solid;
@@ -18,19 +14,18 @@
 #head{
 	font-size: 50px;;
 	text-align:center;
-	color: #425f9e;
+	color: #00FF00;
 	font-family: 'Visitor TT1 BRK', cursive;
   	font-size: 75px;
   	font-family: 'Visitor TT1 BRK', cursive;
   	text-align: center;
   	text-transform: uppercase;
-  	text-shadow: 0 0 20px #104386,0 0 30px white,0 0 6px #425f9e;
-  	
-  	
+  	text-shadow: 0 0 80px green,0 0 30px white,0 0 6px #00FF00;
+  	color: #00FF00;
 }
 
 body{
-	background-color: white;	
+	background-color: #000000;	
 }
 
 #formAluno{
@@ -53,7 +48,7 @@ body{
 }
 @-webkit-keyframes upper {
   0%,19.999%,22%,62.999%,64%, 64.999%,70%,100% {
-    opacity:.99; text-shadow: 0 0 20px #104386,0 0 30px white,0 0 6px #425f9e;
+    opacity:.99; text-shadow: 0 0 80px green,0 0 30px white,0 0 6px #00FF00;
   }
   20%,21.999%,63%,63.999%,65%,69.999% {
     opacity:0.4; text-shadow: none; 
@@ -61,7 +56,7 @@ body{
 }
 @-webkit-keyframes lower {
   0%,12%,18.999%,23%,31.999%,37%,44.999%,46%,49.999%,51%,58.999%,61%,68.999%,71%,85.999%,96%,100% {
-    opacity:0.99; text-shadow: 0 0 20px #104386,0 0 30px white,0 0 6px #425f9e;
+    opacity:0.99; text-shadow: 0 0 80px green,0 0 30px white,0 0 6px #00FF00;
   }
   19%,22.99%,32%,36.999%,45%,45.999%,50%,50.99%,59%,60.999%,69%,70.999%,86%,95.999% { 
     opacity:0.4; text-shadow: none; 
