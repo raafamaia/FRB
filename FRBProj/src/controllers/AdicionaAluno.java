@@ -19,7 +19,7 @@ import dataaccess.ListaAlunoDAO;
 public class AdicionaAluno extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
-	protected void executa(HttpServletRequest request,
+	public void executa(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
 
 //		AlunoDAO alDAO = new AlunoDAO();
