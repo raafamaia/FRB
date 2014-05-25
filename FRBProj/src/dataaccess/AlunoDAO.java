@@ -17,7 +17,7 @@ public class AlunoDAO {
 		this.conn = new ConnectionFactory().getConnection();
 	}
 	
-	public void inserirAluno(Aluno a){
+	public void inserir(Aluno a){
 		
 		String sql = "insert into Aluno (nome, ra, montante, periodo, curso, email, senha)"
 				+ "values (?,?,?,?,?,?,?)";

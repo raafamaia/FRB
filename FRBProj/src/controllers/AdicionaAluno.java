@@ -1,29 +1,24 @@
 package controllers;
 
-import java.io.IOException;
-
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import model.Aluno;
-import dataaccess.AlunoDAO;
+import dataaccess.ListaAlunoDAO;
 
 
-/**
- * Servlet implementation class AdicionaAluno
- */
-@WebServlet("/adicionaAluno")
-public class AdicionaAluno extends HttpServlet {
-	private static final long serialVersionUID = 1L;
+public class AdicionaAluno {
        
 	protected void executa(HttpServletRequest request,
-			HttpServletResponse response) throws ServletException, IOException {
+			HttpServletResponse response) throws ServletException{
 
-		AlunoDAO alDAO = new AlunoDAO();
 		Aluno a = new Aluno();
+//TODO	Quando arrumar o banco, usar a classe AlunoDAO
+//		AlunoDAO alDAO = new AlunoDAO();
+//		alDAO.inserir(a);
+		
+		ListaAlunoDAO alDao = new ListaAlunoDAO();
 		
 		a.setNome(request.getParameter("nome"));
 		a.setRa(Integer.parseInt(request.getParameter("RA")));
@@ -31,7 +26,8 @@ public class AdicionaAluno extends HttpServlet {
 		a.setPeriodo(request.getParameter("periodo"));
 		a.setSenha(request.getParameter("senha"));
 		
-		alDAO.inserirAluno(a);
+		alDao.inserir(a);
+		
 	}
 
 }
