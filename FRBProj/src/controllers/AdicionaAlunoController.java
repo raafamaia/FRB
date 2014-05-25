@@ -12,25 +12,22 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Servlet implementation class CadastraAluno
  */
-@WebServlet("/CadastrarAluno")
+@WebServlet("/CadastraAluno")
 public class AdicionaAlunoController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
-	public AdicionaAlunoController(){
-		super();
-	}
-	
-	protected void service(HttpServletRequest request,HttpServletResponse response) 
+	protected void doPost(HttpServletRequest request,HttpServletResponse response) 
 			throws ServletException, IOException {
 
 		try {
 			new AdicionaAluno().executa(request, response);
 		} catch (Exception e) {
-			throw new ServletException("A camada model gerou uma exceção", e);
+			throw new ServletException("A camada model gerou uma exce��o", e);
 		}
 		
 		RequestDispatcher rd = request.getRequestDispatcher("aluno-cadastrado.jsp");
 		rd.forward(request, response);
+		
 	}
 
 }
