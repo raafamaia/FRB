@@ -2,7 +2,7 @@
 
 
 #form{	
-	font-family: 'Visitor TT1 BRK', cursive;
+	font-family: 'visitor', cursive;
 	border: 1px black solid;
 	background-color: #ffffff;
 	width: 450px;
@@ -62,3 +62,8 @@ body{
     opacity:0.4; text-shadow: none; 
   }
 
+@font-face
+{
+font-family: visitor;
+src: url(/WebContent/font/visitor1.ttf);
+}
