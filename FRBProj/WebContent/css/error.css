@@ -5,7 +5,7 @@ body { background-color: #111111; }
 div {
   padding: 40px;
   font-size: 75px;
-  font-family: 'Visitor TT1 BRK', cursive;
+  font-family: 'visitor', cursive;
   text-align: center;
   text-transform: uppercase;
   text-shadow: 0 0 80px red,0 0 30px FireBrick,0 0 6px DarkRed;
@@ -45,3 +45,8 @@ div p { margin:0; }
   }
 }
 
+@font-face
+{
+font-family: visitor;
+src: url(/WebContent/font/visitor1.ttf);
+}

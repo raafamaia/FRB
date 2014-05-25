@@ -3,8 +3,13 @@
 body{
 	background-color: #000000;	
 	font-size: 35px;
-  	font-family: 'Visitor TT1 BRK', cursive;
+  	font-family: 'visitor', cursive;
   	text-align: center;
   	color: #00FF00;
 }
 
+@font-face
+{
+font-family: visitor;
+src: url(/WebContent/font/visitor1.ttf);
+}
