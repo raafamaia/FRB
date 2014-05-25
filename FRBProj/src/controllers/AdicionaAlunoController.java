@@ -14,17 +14,23 @@ import controllers.AdicionaAluno;
 /**
  * Servlet implementation class CadastraAluno
  */
-@WebServlet("/CadastraAluno")
+@WebServlet(name = "cadastrar", urlPatterns = { "/CadastraAluno" })
 public class AdicionaAlunoController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		RequestDispatcher rd = request.getRequestDispatcher("adiciona-aluno.html");
+		rd.forward(request, response);
+	}
+	
 	protected void doPost(HttpServletRequest request,HttpServletResponse response) 
 			throws ServletException, IOException {
 
 		try {
 			new AdicionaAluno().executa(request, response);
 		} catch (Exception e) {
-			throw new ServletException("A camada model gerou uma exce��o", e);
+			throw new ServletException("A camada model gerou uma exceção", e);
 		}
 		
 		RequestDispatcher rd = request.getRequestDispatcher("aluno-cadastrado.jsp");

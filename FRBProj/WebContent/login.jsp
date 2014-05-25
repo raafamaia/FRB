@@ -9,14 +9,15 @@
 <br>
 
 <fieldset align="center">
-	<form action="telaPrincipal.html" method="POST">
-		<label for="txtUsuario">Usuário:</label>
-		<input type="text" name="txtUsuario"> <br>
+	<form action="login" method="POST">
+		<label for="txtUsuario">Usuário:</label> 
+			<input type="text" name="txtUsuario"> <br> 
 		<label for="txtSenha">Senha:</label>
-		<input type="password" name="txtSenha"> <br> 
+			<input type="password" name="txtSenha"> <br> 
+		
 		<input type="submit" value="Login"> <br>
 	</form>
-	<a href="adiciona-aluno.html">Cadastrar-se</a>
+	<a href="CadastraAluno">Cadastrar-se</a>
 
 </fieldset>
 <fieldset>

@@ -8,5 +8,6 @@
 </head>
 <body>
 	${param.nome} cadastrado com sucesso!
+	<br><br><a href="CadastraAluno">Voltar</a>
 </body>
 </html>

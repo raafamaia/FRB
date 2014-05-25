@@ -6,6 +6,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import model.Aluno;
 import dataaccess.ListaAlunoDAO;
+import dataaccess.UsuarioDAO;
 
 public class AdicionaAluno {
 
@@ -14,7 +15,8 @@ public class AdicionaAluno {
 
 		// AlunoDAO alDAO = new AlunoDAO();
 		ListaAlunoDAO alDao = new ListaAlunoDAO();
-
+		UsuarioDAO userDao = new UsuarioDAO();
+		
 		Aluno a = new Aluno();
 
 		a.setNome(request.getParameter("nome"));
@@ -24,6 +26,8 @@ public class AdicionaAluno {
 		a.setSenha(request.getParameter("senha"));
 
 		alDao.inserir(a);
+		userDao.inserir(a);
+		
 	}
 
 }

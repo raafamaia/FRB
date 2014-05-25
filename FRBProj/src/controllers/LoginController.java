@@ -1,6 +1,8 @@
 package controllers;
 
 import java.io.IOException;
+
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -21,8 +23,25 @@ public class LoginController extends HttpServlet {
         super();
     }
     
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		RequestDispatcher rd = request.getRequestDispatcher("login.jsp");
+		rd.forward(request, response);
+	}
+
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
+		try {
+			boolean autenticado = new Login().autentica(request, response);
+			
+			if (autenticado == true) {
+				request.getRequestDispatcher("telaPrincipal.html").forward(request, response);
+			}else{
+				request.getRequestDispatcher("login").forward(request, response);
+			}
+			
+		} catch (Exception e) {
+			throw new ServletException("Ocorreu algum erro.", e);
+		}
 	}
 
 }
