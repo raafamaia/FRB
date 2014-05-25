@@ -7,11 +7,11 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 </head>
 <body>
-<p id="head"><span>S</span>istema <span>de</span> Geren<span>c</span>iamento de <span>X</span>erox</p>
+<p class="head"><span>S</span>istema <span>de</span> Geren<span>c</span>iamento de <span>X</span>erox</p>
 
 <br>
 
-<fieldset align="center">
+<fieldset id="form">
 	<legend>Log In</legend>
 	<br/>
 	<form action="login" method="POST">
@@ -24,7 +24,7 @@
 		<input type="submit" style="font-family: 'visitor_tt1_brkregular'; font-size: larger; color: #00FF00; background-color: #000000; width : 155px;" value="Login"> <br>
 	</form>
 	<p> ou </p>
-	<a href="CadastraAluno">Cadastrar-se</a>
+	<a class="head" href="CadastraAluno" style="font-size: 20px;">Cadastrar<span>-</span>se</a>
 
 </fieldset>
 <fieldset id="rodape">

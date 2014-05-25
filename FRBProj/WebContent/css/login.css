@@ -18,7 +18,7 @@ body{
   	color: #00FF00;
 }
 
-#head{
+.head{
 	font-size: 50px;
 	text-align:center;
 	color: #00FF00;
@@ -47,13 +47,18 @@ a:visited{
 	top: 85%;
 }
 
-#head span {
+#form{
+	position: absolute;
+	left: 33%;
+}
+
+.head span {
   -webkit-animation: upper 11s linear infinite;
 }
-#head span:nth-of-type(2) {
+.head span:nth-of-type(2) {
   -webkit-animation: lower 10s linear infinite;
 }
-#head span:nth-of-type(1) {
+.head span:nth-of-type(1) {
   text-shadow: none;
   opacity:.4;
 }
