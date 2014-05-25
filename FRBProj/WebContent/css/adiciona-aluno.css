@@ -1,8 +1,18 @@
 @CHARSET "UTF-8";
 
+@font-face {
+    font-family: 'visitor_tt1_brkregular';
+    src: url('visitor1-webfont.eot');
+    src: url('visitor1-webfont.eot?#iefix') format('embedded-opentype'),
+         url('visitor1-webfont.woff') format('woff'),
+         url('visitor1-webfont.ttf') format('truetype'),
+         url('visitor1-webfont.svg#visitor_tt1_brkregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
 
 #form{	
-	font-family: 'visitor', cursive;
+	font-family: visitor_tt1_brkregular, cursive;
 	border: 1px black solid;
 	background-color: #ffffff;
 	width: 450px;
@@ -15,9 +25,8 @@
 	font-size: 50px;;
 	text-align:center;
 	color: #00FF00;
-	font-family: 'Visitor TT1 BRK', cursive;
+	font-family: visitor_tt1_brkregular, cursive;
   	font-size: 75px;
-  	font-family: 'Visitor TT1 BRK', cursive;
   	text-align: center;
   	text-transform: uppercase;
   	text-shadow: 0 0 80px green,0 0 30px white,0 0 6px #00FF00;
@@ -62,8 +71,5 @@ body{
     opacity:0.4; text-shadow: none; 
   }
 
-@font-face
-{
-font-family: visitor;
-src: url(/WebContent/font/visitor1.ttf);
-}
+
+
