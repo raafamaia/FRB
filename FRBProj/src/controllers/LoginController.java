@@ -34,7 +34,7 @@ public class LoginController extends HttpServlet {
 			boolean autenticado = new Login().autentica(request, response);
 			
 			if (autenticado == true) {
-				request.getRequestDispatcher("telaPrincipal.html").forward(request, response);
+				request.getRequestDispatcher("home.jsp").forward(request, response);
 			}else{
 				request.getRequestDispatcher("login").forward(request, response);
 			}

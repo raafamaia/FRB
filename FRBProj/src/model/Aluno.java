@@ -1,5 +1,8 @@
 package model;
 
+import javax.persistence.Entity;
+
+@Entity
 public class Aluno extends Usuario{
 	private String periodo;
 	private String curso;

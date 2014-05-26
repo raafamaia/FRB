@@ -15,9 +15,14 @@ public class Login {
 		String senha = request.getParameter("txtSenha");
 		
 		return new UsuarioDAO().autentica(usuario, senha);
+	}
+	
+	public int idLogado(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException{
 		
 		
 		
+		return 0;
 	}
 	
 }
