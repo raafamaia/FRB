@@ -1,11 +1,43 @@
 package model;
 
-public class Usuario extends Conta {
-	
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+@Entity
+public class Usuario{
+	@Id @GeneratedValue
 	private int id;
+	private int ra;
 	private String nome;	
 	private String senha;
 	private String email;
+	private String periodo;
+	private String curso;
+	
+	public int getRa() {
+		return ra;
+	}
+
+	public void setRa(int ra) {
+		this.ra = ra;
+	}
+
+	public String getPeriodo() {
+		return periodo;
+	}
+
+	public void setPeriodo(String periodo) {
+		this.periodo = periodo;
+	}
+
+	public String getCurso() {
+		return curso;
+	}
+
+	public void setCurso(String curso) {
+		this.curso = curso;
+	}
 	
 	public int getId() {
 		return id;

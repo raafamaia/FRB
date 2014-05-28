@@ -4,8 +4,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import model.Aluno;
-import dataaccess.ListaAlunoDAO;
+import model.Usuario;
 import dataaccess.UsuarioDAO;
 
 public class AdicionaAluno {
@@ -14,18 +13,17 @@ public class AdicionaAluno {
 			throws ServletException{
 
 		// AlunoDAO alDAO = new AlunoDAO();
-		ListaAlunoDAO alDao = new ListaAlunoDAO();
 		UsuarioDAO userDao = new UsuarioDAO();
 		
-		Aluno a = new Aluno();
+		Usuario a = new Usuario();
 
 		a.setNome(request.getParameter("nome"));
 		a.setRa(Integer.parseInt(request.getParameter("RA")));
 		a.setCurso(request.getParameter("curso"));
 		a.setPeriodo(request.getParameter("periodo"));
 		a.setSenha(request.getParameter("senha"));
+		a.setEmail(request.getParameter("email"));
 
-		alDao.inserir(a);
 		userDao.inserir(a);
 		
 	}

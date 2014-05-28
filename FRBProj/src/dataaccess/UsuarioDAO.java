@@ -3,6 +3,10 @@ package dataaccess;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+
 import model.Usuario;
 
 /*TODO Refazer classe quando for feito o banco de dados*/
@@ -13,7 +17,10 @@ public class UsuarioDAO {
 	public UsuarioDAO(){}
 	
 	public void inserir(Usuario u){
-		listUsuarios.add(u);
+		EntityManagerFactory emf = Persistence.createEntityManagerFactory("default");
+	    EntityManager em = emf.createEntityManager();
+		em.persist(u);
+		em.close();
 	}
 	
 	public boolean autentica(String user, String senha){
