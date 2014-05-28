@@ -7,13 +7,14 @@ import javax.persistence.Id;
 @Entity
 public class Usuario{
 	@Id @GeneratedValue
-	private int id;
+	private long id;
 	private int ra;
 	private String nome;	
 	private String senha;
 	private String email;
 	private String periodo;
 	private String curso;
+	
 	
 	public int getRa() {
 		return ra;
@@ -39,11 +40,11 @@ public class Usuario{
 		this.curso = curso;
 	}
 	
-	public int getId() {
+	public long getId() {
 		return id;
 	}
 
-	public void setId(int id) {
+	public void setId(long id) {
 		this.id = id;
 	}
 
