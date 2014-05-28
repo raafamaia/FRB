@@ -15,16 +15,16 @@ public class AdicionaAluno {
 		// AlunoDAO alDAO = new AlunoDAO();
 		UsuarioDAO userDao = new UsuarioDAO();
 		
-		Usuario a = new Usuario();
+		Usuario u = new Usuario();
 
-		a.setNome(request.getParameter("nome"));
-		a.setRa(Integer.parseInt(request.getParameter("RA")));
-		a.setCurso(request.getParameter("curso"));
-		a.setPeriodo(request.getParameter("periodo"));
-		a.setSenha(request.getParameter("senha"));
-		a.setEmail(request.getParameter("email"));
+		u.setNome(request.getParameter("nome"));
+		u.setRa(Integer.parseInt(request.getParameter("RA")));
+		u.setCurso(request.getParameter("curso"));
+		u.setPeriodo(request.getParameter("periodo"));
+		u.setSenha(request.getParameter("senha"));
+		u.setEmail(request.getParameter("email"));
 
-		userDao.inserir(a);
+		userDao.inserir(u);
 		
 	}
 
