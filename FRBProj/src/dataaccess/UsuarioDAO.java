@@ -13,7 +13,26 @@ public class UsuarioDAO {
 	public UsuarioDAO(){}
 	
 	public void inserir(Usuario u){
-		listUsuarios.add(u);
+		if (!listUsuarios.isEmpty()) {
+			u.setId(listUsuarios.size());
+			listUsuarios.add(u);
+		}else{
+			u.setId(0);
+			listUsuarios.add(u);
+		}
+	}
+	
+	public void atualizar(Usuario u){
+		listUsuarios.set(u.getId(), u);
+	}
+	
+	public Usuario buscaPorId(int id){
+		for (int i = 0; !listUsuarios.isEmpty() && i < listUsuarios.size(); i++) {
+			if (id == listUsuarios.get(i).getId()) {
+				return listUsuarios.get(i);
+			}
+		}
+		return null;
 	}
 	
 	public boolean autentica(String user, String senha){

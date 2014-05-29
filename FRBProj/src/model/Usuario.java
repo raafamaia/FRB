@@ -1,11 +1,15 @@
 package model;
 
-public class Usuario extends Conta {
+public class Usuario {
 	
 	private int id;
-	private String nome;	
+	private String nome;
 	private String senha;
 	private String email;
+	private Conta conta;
+	
+	public Usuario(){
+	}
 	
 	public int getId() {
 		return id;
@@ -38,8 +42,13 @@ public class Usuario extends Conta {
 	public void setSenha(String senha) {
 		this.senha = senha;
 	}
-	
-	
-	
 
+	public Conta getConta() {
+		return conta;
+	}
+
+	public void setConta(Conta conta) {
+		this.conta = conta;
+	}
+	
 }
